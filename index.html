@@ -1,0 +1,273 @@
+<html>
+    <head>
+        <style>
+            body{background-color: #bea377;}
+            @keyframes slide {
+                0% { transform: translateX(0); }
+                10% { transform: translateX(0); }
+            
+                15% { transform: translateX(-100%); }
+                30% { transform: translateX(-100%); }
+            
+                35% { transform: translateX(-200%); }
+                50% { transform: translateX(-200%); }
+            
+                55% { transform: translateX(-300%); }
+                70% { transform: translateX(-300%); }
+            
+                75% { transform: translateX(-400%); }
+                90% { transform: translateX(-400%); }
+            
+                95% { transform: translateX(-500%); }
+                100% { transform: translateX(-500%); }
+            }
+            
+            * { box-sizing: border-box; }
+            
+            html { scroll-behavior: smooth; }
+            
+            
+            .wrapper {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            
+            .slider {
+                position: relative;
+            }
+            
+            .slides {
+                position: relative;
+                display: flex;
+                overflow: hidden;
+            }
+            
+            .slide {
+                width: 100vw;
+                flex-shrink: 0;
+                animation-name: slide;
+                animation-duration: 15s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            
+            .slides:hover .slide {
+                animation-play-state: paused;
+            }
+            
+            .slide img {
+                width: 100%;
+                vertical-align: top;
+            }
+            
+            .slide a {
+                width: 100%;
+                display: inline-block;
+                position: relative;
+            }
+            
+            .caption {
+    
+                color:#bea377;
+                text-shadow: 1px 1px black;
+                font-size: 8vw;
+                position: absolute;
+                bottom: 8vw;
+                right: 4vw;
+            }
+            
+            .slide:target {
+                animation-name: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 50;
+            }
+            
+            .slider-controler {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                text-align: center;
+                padding: 5px;
+                background-color: rgba(0,0,0,0.5);
+                z-index: 100;
+            }
+            
+            .slider-controler li {
+                margin: 0 0.5rem;
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            .slider-controler a {
+                display: inline-block;
+                vertical-align: top;
+                text-decoration: none;
+                color: #ffffff;
+                font-size: 1.5rem;
+            }
+            
+            @media only screen and (min-width: 1200px) {
+                .slide {
+                    width: 1200px;
+                }
+            
+                .caption {
+                    font-size: 96px;
+                    bottom: 96px;
+                    right: 50px;
+                }
+            }
+            .head{
+                background-color: #bea377;
+            }
+                .title1{
+                    text-align: center;
+                    font-size: 52.9;
+                    font-family: rockwell;
+                    color: #ffffff;
+                }
+            .text1{
+                margin-left: 60px;
+                margin-right: 50px;
+                font-size: 36;
+                font-family: rockwell;
+                color: #000000;
+            }
+            .body1{
+            font-family: rockwell;
+            font-size: 15;
+            margin-left: 60px;
+            margin-right: 80px;
+            color: #000000;
+            }
+            .flavors{
+                font-weight: normal;
+            }
+            .body2{
+                height: 550px;
+                width: 1200px;
+                background-image: url(https://i.ibb.co/Z6P3DrC/nueve.png);
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            .body3{
+                font-family: rockwell;
+                margin-top: 10px;
+                margin-left: 120px;
+                margin-right: 80px;
+            }
+            .body4{
+                line-height: 0;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            .footer{
+                height: 75px;
+                background-image: url(https://i.ibb.co/BsFq17S/12.png);
+                line-height: 0;
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+            .info{
+                font-weight: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+        <div class="wrapper">
+        <div class="slider" id="slider">
+            <ul class="slides">
+            <li class="slide" id="slide1" type="none">
+                <a href="#">
+                
+                <img src="https://i.ibb.co/0rnKkP3/1.png" alt="photo 1">
+                </a>
+            </li>
+            <li class="slide" id="slide2" type="none">
+                <a href="#">
+                <img src="https://i.ibb.co/CJQRPyr/2.png" alt="photo 2">
+                </a>
+            </li>
+            <li class="slide" id="slide3" type="none">
+                <a href="#">
+                <img src="https://i.ibb.co/fYDsdC6/3.png" alt="photo 3">
+                </a>
+            </li>
+            <li class="slide" id="slide4" type="none">
+                <a href="#">
+                <img src="https://i.ibb.co/JcTF1fc/4.png" alt="photo 4">
+                </a>
+            </li>
+            <li class="slide" id="slide5" type="none">
+                <a href="#">
+                    <img src="https://i.ibb.co/KwWqs86/5.png" alt="photo 5">
+                </a>
+            </li>
+            <li class="slide" id="slide6" type="none">
+                <a href="#">
+                    <img src="https://i.ibb.co/zmPdByz/6.png" alt="photo 5">
+            </ul>
+            <ul class="slider-controler">
+            <li><a href="#slide1">&bullet;</a></li>
+            <li><a href="#slide2">&bullet;</a></li>
+            <li><a href="#slide3">&bullet;</a></li>
+            <li><a href="#slide4">&bullet;</a></li>
+            <li><a href="#slide5">&bullet;</a></li>
+            <li><a href="#slide6">&bullet;</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="title1">
+    <p>¡PREPÁRATE PARA PROBAR EXQUISITECES!
+    </p>
+        </div>
+        <div class="text1">
+            <p>Las galletas ofrecidas por la empresa son productos de calidad, hechos con los mejores ingredientes que les dan el mejor sabor.</p>
+            <p> Nos caracterizamos por buscar lo mejor para nuestros clientes por eso traemos variedad.</p>
+        </div>    
+        <hr style="height:3px;border:none;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);margin: 80px;">
+        </hr>
+        <div class="body1">
+        <left><font color="white" size="50">¿Cuales son<br> nuestros sabores?</font></left>
+        <img src="https://i.ibb.co/sbPgdkk/7.jpg" width="300" height="400" align="right"><img src="https://i.ibb.co/S6X258M/8.jpg"width="300" height="400" align="right"><h1 class="flavors"><ul><li>Galleta Original (Chips de<br> chocolate)</br></li><li>Red Velvet<li>Galletas con M&M's</li><li>Galletas de avena</li><li>Galletas rellenas de chocolate</li><li>Galletas de cacao</li></ul></h1>
+            </div>
+        <p>
+        </p>
+            <hr style="height:3px;border:none;color:rgb(0, 0, 0);background-color:rgb(0, 0, 0);margin: 80px;">
+        </hr>
+    <div class="body2">
+        <div class="body3">
+                <br>
+                <br>
+                <br>
+            <center><font color="black" size="60">¿Por qué elegirnos?</font></left></center>
+        <img src="https://i.ibb.co/5KLJ2RJ/10.png" width="300" height="300" align="right"><font face="rockwell"></font><h1 class="info">Nos preocupamos por<br> buscar los ingredientes de<br> la mejor calidad que no<br> tengan tantos químicos,<br> que sean naturales y que no<br> tengan los mismos sabores<br> ya que tendrá su sabor que<br> lo identifique.</h1>
+                </br>
+                </br>
+                </br>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    </body>
+    <div class="body4">
+        <img src="https://i.ibb.co/L8w1tcz/11.png" width="1325" height="130" margin-left="0px" margin-right="0px">
+    </div>
+    </br>
+    </br>
+    </br>
+    <div class="footer">
+    <br>
+        <center><font color="white"><h4>©2022 | Todos los derechos reservados |<p> Valledupar - Colombia </h4></p></font></left></center>
+    </br>
+    </div>
+</html>|
